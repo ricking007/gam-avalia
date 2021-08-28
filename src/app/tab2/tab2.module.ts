@@ -1,3 +1,4 @@
+import { TenantComponent } from './../components/tenant/tenant.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,6 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     ExploreContainerComponentModule,
     Tab2PageRoutingModule
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page,TenantComponent]
 })
 export class Tab2PageModule {}

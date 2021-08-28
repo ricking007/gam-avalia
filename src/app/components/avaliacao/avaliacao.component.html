@@ -1,0 +1,53 @@
+<ion-card>
+    <!-- <ion-list-header lines="inset">
+        <ion-button (click)="voltar()">Voltar</ion-button>
+        <ion-label text-wrap class="titulo-header">{{pessoa_tipo}}</ion-label>
+    </ion-list-header> -->
+    <ion-item (click)="avaliar('JOAQUIM JOSÉ DA SILVA CHAVIER')">
+        <ion-avatar slot="start" class="item-avatar">
+            <img src="assets/img/avatar.png">
+        </ion-avatar>
+        <ion-label text-wrap class="titulo-list">{{pessoa}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label text-wrap class="sub-titulo-list">Atribua uma avaliação</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-icon [color]="color5" name="heart-outline"></ion-icon>
+                    <p>AMEI!!!</p>
+                </ion-col>
+                <ion-col>
+                    <ion-icon [color]="color4" name="happy-outline"></ion-icon>
+                    <p> BOM</p>
+                </ion-col>
+                <ion-col>
+                    <ion-icon [color]="color3" name="swap-vertical-outline"></ion-icon>
+                    <p>REGULAR</p>
+                </ion-col>
+                <ion-col>
+                    <ion-icon [color]="color2" name="sad-outline"></ion-icon>
+                    <p>PRECISA MELHORAR</p>
+                </ion-col>
+                <ion-col>
+                    <ion-icon [color]="color1" name="thumbs-down-outline"></ion-icon>
+                    <p>NÃO GOSTEI</p>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+    <!-- Textarea in an item with a floating label -->
+    <ion-item lines="none">
+        <ion-label position="stacked" text-wrap class="sub-titulo-list">Se quiser pode deixar um comentário!</ion-label>
+        <ion-textarea name="comentario" placeholder="Digite sua mensagem aqui..." class="input" [(ngModel)]="comentario"></ion-textarea>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-button expand="block" size="large" (click)="salvar()">CONCLUIR AVALIAÇÃO</ion-button>
+    </ion-item>
+
+
+    <!-- class="ion-text-center" -->
+</ion-card>

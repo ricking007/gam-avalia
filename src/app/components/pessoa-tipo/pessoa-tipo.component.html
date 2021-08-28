@@ -1,0 +1,41 @@
+<ion-card *ngIf="!pessoa_tipo">
+    <ion-list-header lines="inset">
+        <ion-label text-wrap class="titulo-header">Avaliar Atendimento</ion-label>
+        <!-- <ion-button>Clear</ion-button> -->
+    </ion-list-header>
+
+    <ion-item (click)="open('RECEPÇÃO')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">RECEPÇÃO</ion-label>
+        <!-- <ion-icon name="arrow-forward" end></ion-icon> -->
+    </ion-item>
+    <ion-item (click)="open('MÉDICO')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">MÉDICO</ion-label>
+    </ion-item>
+    <ion-item (click)="open('DENTISTA')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">DENTISTA</ion-label>
+    </ion-item>
+    <ion-item (click)="open('PSICÓLOGO')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">PSICÓLOGO</ion-label>
+    </ion-item>
+    <ion-item (click)="open('PORTEIRO')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">PORTEIRO</ion-label>
+    </ion-item>
+    <ion-item (click)="open('ENFERMARIA')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">ENFERMARIA</ion-label>
+    </ion-item>
+    <ion-item (click)="open('CANTINA')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">CANTINA</ion-label>
+    </ion-item>
+    <ion-item (click)="open('AMBULATÓRIO')" detail>
+        <ion-icon name="happy-outline"></ion-icon>
+        <ion-label text-wrap class="titulo-list">AMBULATÓRIO</ion-label>
+    </ion-item>
+</ion-card>
+<app-pessoa *ngIf="pessoa_tipo" [pessoa_tipo]="pessoa_tipo" (_pessoa_tipo)="_pessoa_tipo($event)"></app-pessoa>

@@ -1,5 +1,7 @@
 {
   "name": "GAM Avalia",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

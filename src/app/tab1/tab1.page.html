@@ -1,17 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+    <!-- <div *ngIf="!tenant" id="container">
+        <div id="dentro">
+            <div class="form-group">
+                <input autocomplete="off" class="form-control input-lg col-lg-6 text-center" placeholder="MUNICÍPIO" id="inputlg" type="text" [(ngModel)]="input">
+            </div>
+            <ion-button expand="block" fill="outline" size="large" (click)="iniciar()">INICIAR</ion-button>
+        </div>
+    </div> -->
+    <app-tenant *ngIf="!tenant" id="container" (tenant)="getTenant($event)"></app-tenant>
+    <ion-grid *ngIf="tenant">
+        <app-pessoa-tipo></app-pessoa-tipo>
+    </ion-grid>
 </ion-content>

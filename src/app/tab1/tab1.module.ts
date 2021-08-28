@@ -1,3 +1,7 @@
+import { AvaliacaoComponent } from './../components/avaliacao/avaliacao.component';
+import { TenantComponent } from './../components/tenant/tenant.component';
+import { PessoaComponent } from './../components/pessoa/pessoa.component';
+import { PessoaTipoComponent } from './../components/pessoa-tipo/pessoa-tipo.component';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,8 +17,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page,PessoaTipoComponent,PessoaComponent,TenantComponent,AvaliacaoComponent]
 })
 export class Tab1PageModule {}
